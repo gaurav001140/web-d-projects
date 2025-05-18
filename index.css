@@ -1,0 +1,135 @@
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #b3d4fc, #1e90ff);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+.container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+  min-height: 85vh; 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  margin: 40px auto;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+h1.logo-text {
+  text-align: center;
+  color: #0047ab;
+  margin-bottom: 20px;
+}
+
+.input-block {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.input-block input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  transition: box-shadow 0.3s;
+}
+
+.input-block input:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 72, 255, 0.6);
+  border-color: #1e90ff;
+}
+
+.add-btn {
+  background-color: #1e90ff;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #005dd1;
+  transform: scale(1.05);
+}
+
+.tasks-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+
+.tasks-list {
+  list-style-type: none;
+  padding: 0;
+  max-height: 300px; 
+  overflow-y: auto;
+  background: #f5faff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.task-item {
+  background: #eaf2fb;
+  border-radius: 10px;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.task-item:hover {
+  background: #d2e6fb;
+}
+
+.task-item span {
+  cursor: pointer;
+  flex: 1;
+}
+
+.task-item .completed {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.op-btn button {
+  margin-left: 8px;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #cce1ff;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.op-btn button:hover {
+  background-color: #a7ceff;
+}
